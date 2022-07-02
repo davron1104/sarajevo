@@ -1,0 +1,57 @@
+@mixin font($fw: 100) {
+    font-family: 'Lato';
+    font-weight: $fw;
+}
+@mixin flex($jc: center, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@mixin inline-flex($jc: center, $ai: center) {
+    display: inline-flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@mixin bg($url: '', $repeat: no-repeat, $size: cover, $x: center, $y: center) {
+    background: url($url) $repeat $x $y / $size;
+}
+@mixin _1199($name, $value){
+    @media (max-width: 1199.98px){
+        #{$name}: $value;
+    }
+}
+@mixin _1199-block{
+    @media (max-width: 1199.98px){
+        @content;
+    }
+}
+@mixin _991($name, $value){
+    @media (max-width: 991.98px){
+        #{$name}: $value;
+    }
+}
+@mixin _991-block{
+    @media (max-width: 991.98px){
+        @content;
+    }
+}
+@mixin _767($name, $value){
+    @media (max-width: 767.98px){
+        #{$name}: $value;
+    }
+}
+@mixin _767-block{
+    @media (max-width: 767.98px){
+        @content;
+    }
+}
+@mixin _575($name, $value){
+    @media (max-width: 575.98px){
+        #{$name}: $value;
+    }
+}
+@mixin _575-block{
+    @media (max-width: 575.98px){
+        @content;
+    }
+}
